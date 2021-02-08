@@ -46,24 +46,15 @@
 // })
 import Vue from 'vue/dist/vue.esm'
 import Message from '../components/message.vue'
-// import Fingerprint2 from 'fingerprintjs2'
 
 // コンポーネントのグローバル登録
 Vue.component('message', Message)
-Vue.prototype.$fingerprint = Fingerprint2;
 
 document.addEventListener('DOMContentLoaded', () => {
   const vm = new Vue({
     el: '#app',
     data: {
-      message: 'hello,world',
-      finger: ''
-    },
-    created() {
-      // this.$fingerprint.get((components) => {
-      //   this.finger = this.$fingerprint.x64hash128(components.map((pair)=>{ return pair.value }).join(), 31)
-      //   console.log(this.finger)
-      // });
+      message: 'hello,world'
     }
   })
 })
